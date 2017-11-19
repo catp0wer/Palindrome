@@ -18,11 +18,17 @@ public class Main {
 
             else{
                 isPalindrom=false;
-                System.out.println("Elementul " +arrayFromWord[arrayFromWord.length-i-1]+" nu este egal cu elementul " +arrayFromWord[i] );
+                System.out.println("The element " +arrayFromWord[arrayFromWord.length-i-1]+" is not equal to " +arrayFromWord[i] );
                break;
 
             }
         }
+        if(isPalindrom==true){
+            System.out.println("This is a palindrome");
+        }else{
+            System.out.println("This is not a palindrome");
+        }
     }
+
 }
 
