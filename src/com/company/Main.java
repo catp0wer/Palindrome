@@ -1,34 +1,17 @@
 package com.company;
+import com.company.ReadingFile;
 
+import java.io.IOException;
+import java.io.FileReader;
 import java.util.Arrays;
+import java.io.*;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
 
-        String word = "CIVIC";
-        System.out.println("The word is " + word);
-        char[] arrayFromWord = word.toCharArray();
-        System.out.println("The array from String is: " + Arrays.toString(arrayFromWord));
+        ReadingFile word = new ReadingFile();
 
-        boolean isPalindrome = true;
-        for (int i = 0; i < arrayFromWord.length/2; i++) {
-            if (arrayFromWord[i] == arrayFromWord[arrayFromWord.length - i - 1]) {
-                System.out.println("Compare " + arrayFromWord[i] + " with " + arrayFromWord[arrayFromWord.length - i - 1]);
-            }
-
-            else{
-                isPalindrome=false;
-                System.out.println("The element " +arrayFromWord[arrayFromWord.length-i-1]+" is not equal to " +arrayFromWord[i] );
-               break;
-
-            }
-        }
-        if(isPalindrome==true){
-            System.out.println("This is a palindrome");
-        }else{
-            System.out.println("This is not a palindrome");
-        }
+        String line = word.ReadFile();
     }
-
 }
-
