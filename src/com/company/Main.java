@@ -12,6 +12,6 @@ public class Main {
 
         ReadingFile word = new ReadingFile();
 
-        String line = word.ReadFile();
+        List<String> result = word.ReadFile();
     }
 }
