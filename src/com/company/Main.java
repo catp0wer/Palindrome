@@ -10,8 +10,15 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
         String filePath = "D:\\Git_projects\\Palindrome\\Words.txt";
-        ReadingFile word = new ReadingFile();
+        ReadingFile words = new ReadingFile();
 
-        List<String> result = word.ReadFile(filePath);
+        List<String> result = words.ReadFile(filePath);
+        System.out.println(result);
+
+        Comparing word = new Comparing();
+
+        for (int i = 0; i < result.size(); i++) {
+         word.Comp(result.get(i).toLowerCase());
+       }
     }
 }
