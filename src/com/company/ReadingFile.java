@@ -7,14 +7,14 @@ import java.util.List;
 
 public class ReadingFile {
 
-    public List<String> ReadFile() {
+    public List<String> ReadFile(String filePath) {
 
         System.out.println("Reading File from Java code");
-        String fileName = "D:\\Git_projects\\Palindrome\\Words.txt";
+        //String fileName = "D:\\Git_projects\\Palindrome\\Words.txt";
         String line = "";
         List<String> result = new ArrayList<String>();
         try {
-            FileReader inputFile = new FileReader(fileName);
+            FileReader inputFile = new FileReader(filePath);
             BufferedReader bufferReader = new BufferedReader(inputFile);
 
             while ((line=bufferReader.readLine())!= null) {

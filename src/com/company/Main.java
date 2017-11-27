@@ -9,9 +9,9 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-
+        String filePath = "D:\\Git_projects\\Palindrome\\Words.txt";
         ReadingFile word = new ReadingFile();
 
-        List<String> result = word.ReadFile();
+        List<String> result = word.ReadFile(filePath);
     }
 }
