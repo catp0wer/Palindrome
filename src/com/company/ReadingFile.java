@@ -17,17 +17,27 @@ public class ReadingFile {
             FileReader inputFile = new FileReader(filePath);
             BufferedReader bufferReader = new BufferedReader(inputFile);
 
-            while ((line=bufferReader.readLine())!= null) {
+            while ((line = bufferReader.readLine()) != null) {
 
                 System.out.println(line);
                 result.add(line);
 
-            } System.out.println(result);
+            }
+            System.out.println(result);
             bufferReader.close();
 
         } catch (Exception e) {
-            System.out.println("Error while reading file line by line:" + e.getMessage());
+
+            String exceptionDetails = e.toString() + "\n";
+            StackTraceElement[] trace = e.getStackTrace();
+            for (StackTraceElement i: trace) {
+                exceptionDetails += i.toString() + "\n";
+            }
+
+            System.out.println("Error while reading file line by line:" + exceptionDetails);
+
         }
         return result;
+
     }
 }
